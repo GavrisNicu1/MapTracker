@@ -8,14 +8,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Distanță: 0.00 km"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/btn_start_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Traseu"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF" />
+        android:layout_marginBottom="30dp"
+        android:text="Start Traseu"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white" />
 
 </FrameLayout>
