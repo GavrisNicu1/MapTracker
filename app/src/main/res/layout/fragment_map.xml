@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <org.osmdroid.views.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn_history"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="20dp"
+        android:text="🕒"
+        android:textSize="24sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#000000"
+        app:cornerRadius="30dp"
+        android:elevation="10dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -14,8 +28,7 @@
         android:layout_gravity="top|center_horizontal"
         android:layout_marginTop="40dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        app:cardElevation="5dp">
 
         <TextView
             android:id="@+id/txt_info"
@@ -28,14 +41,31 @@
             android:textColor="@android:color/black"/>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btn_start_stop"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="30dp"
-        android:text="Start Traseu"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white" />
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvează și Șterge"
+            android:visibility="gone"
+            android:backgroundTint="#FF0000"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Traseu"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
 </FrameLayout>
